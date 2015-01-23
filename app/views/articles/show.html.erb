@@ -1,11 +1,29 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
+<div class="current-article">
+	<h1><%= @article.title %></h1>
+	<p class="current-article-date"><%= @article.created_at.strftime('%B %d, %Y') %></p>
+	<p class="current-article-body"><%= @article.body %></p>
+
+	<p class="current-article-image">
+		<% if @article.image.exists? %>
+      <%= image_tag @article.image.url(:medium)%><br/>
+  	<% end %>
+	</p>
+
+
+</div>
 
 <%= render partial: "comments/form" %>
 
-<h3><%= @article.comments.size %>&nbsp;Comments</h3>
-<%= render partial: "comment", collection: @article.comments %>
+<div class="comment-section">
+	<h3><%= @article.comments.size %>&nbsp;Comments</h3>
+	<%= render partial: "comment", collection: @article.comments %>
+</div>
 
-<%= link_to "Edit post", edit_article_path(@article) %><br>
-<%= link_to "Delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"} %><br><br>
-<%= link_to "Back to Main Page", articles_path %>
+<% if logged_in? %>
+	<%= link_to "Edit post", edit_article_path(@article) %><br>
+	<%= link_to "Delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"} %><br><br>
+<% end %>
+
+<div class="home">
+	<%= link_to "Home", articles_path %>
+</div>

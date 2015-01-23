@@ -1,10 +1,26 @@
-<h1 class="name_header">All Articles</h1>
+<header>
+	<h1 class="name-header">johnny ji.</h1>
+	<p class="social-icons">
+		<a href=""><i class="fa fa-facebook"></i></a>
+		<a href=""><i class="fa fa-twitter"></i></a>
+		<a href=""><i class="fa fa-instagram"></i></a>
+		<a href=""><i class="fa fa-github"></i></a>
+		<a href=""><i class="fa fa-slack"></i></a>
+	</p>
+</header>
 
 <br>
+
 <div class="articles">
 	<% @articles.each do |article| %>
-		<h3><%= link_to article.title, article_path(article), class: 'article_title' %></h3>
+		<h3><%= link_to article.title, article_path(article)%></h3>
 		<p><%= link_to article.created_at.strftime("%B %d, %Y"), article_path(article) %></p><br>
 	<% end %>
-	<p><%= link_to "Create a New Article", new_article_path, class: 'new_article_button' %></p>
 </div>
+
+<% if logged_in? %>
+	<p class="new-article"><%= link_to "Create a New Article", new_article_path %></p>
+<% end %>
+
+
+

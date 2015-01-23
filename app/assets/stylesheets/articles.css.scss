@@ -1,7 +1,201 @@
+$main-color: #202020;
+$hover-color: #2980b9;
+
 * {
+	font-family: 'Lato', arial;
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+body {
+	position: relative;
+	left: 10%;
+	
+	width: 80vw;
+	height: auto;
+	color: #202020;
+}
+/*FORMS*/
+
+.new_article{
+	#article_title {
+		border: 1px solid $main-color;
+		margin-top: 0.5em;
+	}
+
+	#article_body {
+		border: 1px solid $main-color;
+		margin-top: 0.5em;
+	}
+
+	.form_subtitle {
+		font-size: 1.2em;
+		color: $hover-color;
+	}
+
+	.submit_buttom {
+		color: red;
+	}
+}
+
+/*STYLING THE MAIN INDEX*/
+
+header {
+	width: auto;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	font-size: 1.1em;
+
+	h1 {
+		text-transform: lowercase;
+		font-size: 2em;
+	}
+
+	p {
+		font-size: 1.3em;
+
+		a {
+			padding-right: 0.5em;
+		}
+
+		a:hover {
+			color: $hover-color;
+		}
+	}
+}
+
+.articles {
+
+	height: auto;
+	min-height: 100vh;
+
+	h3 {
+		margin-bottom: 0.5em;
+	}
+
+	h3 a:hover {
+		color: $hover-color;
+	}
+
+	p {
+		color: gray;
+		margin: 0;
+	}
+}
+
+/*NEW PAGE*/
+
+.new-post {
+	width: 80vw;
+	height: auto;
+	min-height: 85vh;
+	
+	h1 {
+		text-transform: lowercase;
+		margin-top: 2em;
+		margin-bottom: 1em;
+	}
+
+	.form_image {
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+
+		#article_image {
+			margin-top: 0.5em;
+		}
+	}
+}
+
+/*SHOW PAGE*/
+
+.current-article {
+	width: 70vw;
+	margin-top: 3em;
+	margin-bottom: 3em;
+
+	h1 {
+		margin-bottom: 0.5em;
+	}
+
+	.current-article-date {
+		margin-top: 0;
+		margin-bottom: 3em;
+		color: gray;
+	}
+
+	.current-article-body {
+		margin-bottom: 5em;
+	}
+
+	.current-article-image {
+		width: 30vw;
+		height: auto;
+	}
+}
+
+.home:hover {
+	color: $hover-color;
+}
+
+/*STYLING THE COMMENT BOX*/
+
+.comment-section {
+	margin-top: 4em;
+	margin-bottom: 4em;
+
+	h3 {
+		text-decoration: underline;
+		margin-bottom: 3em;
+	}
+}
+
+.comments {
+	border-bottom: 1px solid $main-color;
+	width: 40vw;
+	margin-bottom: 3em;
+
+	h4 {
+		margin-bottom: 0;
+	}
+
+	.comment-time {
+		margin-top: 0.5em;
+		margin-bottom: 1em;
+		color: gray;
+	}
+}
+
+.comment-body {
+	color: black;
 	font-family: arial;
 	a {
 		color: inherit;
 		text-decoration: none;
+	}
+}
+
+/*FOOTER*/
+
+footer {
+	position: relative;
+	bottom: 0;
+	height: 10vh;
+
+	p {
+		position: absolute;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		top: 50%;
+		margin: 0;
+		color: gray;
+
+		a:hover {
+			color: $hover-color;
+		}
 	}
 }
