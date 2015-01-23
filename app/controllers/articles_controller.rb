@@ -2,11 +2,13 @@ class ArticlesController < ApplicationController
 include ArticlesHelper
 
 	def index
-		@articles = Article.all;
+		@articles = Article.all.order('created_at DESC');
 	end
 
 	def show
 		@article = Article.find(params[:id])
+		@comment = Comment.new
+		@comment.article_id = @article_id
 	end
 
 	def new
