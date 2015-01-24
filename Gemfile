@@ -42,3 +42,7 @@ gem "paperclip"
 
 gem "sorcery"
 
+group :production do
+	gem 'pg'
+end
+
