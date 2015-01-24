@@ -15,15 +15,16 @@
 <%= render partial: "comments/form" %>
 
 <div class="comment-section">
-	<h3><%= @article.comments.size %>&nbsp;Comments</h3>
-	<%= render partial: "comment", collection: @article.comments %>
+	<h3><%= @comments.size %>&nbsp;Comments</h3>
+	<%= render partial: "comment", collection: @comments %>
 </div>
 
+<!-- only show if user is logged in  -->
 <% if logged_in? %>
 	<%= link_to "Edit post", edit_article_path(@article) %><br>
 	<%= link_to "Delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"} %><br><br>
 <% end %>
 
 <div class="home">
-	<%= link_to "Home", articles_path %>
+	<%= link_to "go back", articles_path %>
 </div>

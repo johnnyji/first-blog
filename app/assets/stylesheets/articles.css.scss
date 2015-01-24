@@ -18,7 +18,38 @@ body {
 	height: auto;
 	color: #202020;
 }
+
+.flash {
+	color: $hover-color;
+}
+
 /*FORMS*/
+
+
+
+.field_name {
+	color: $hover-color;
+	font-size: 1.2em;
+}
+
+#email {
+	margin-top: 0.5em;
+	border: 1px solid $main-color;
+}
+
+#password {
+	margin-top: 0.5em;
+	border: 1px solid $main-color;
+}
+
+.comment_subtitle {
+	color: $hover-color;
+}
+
+.comment_text {
+	margin-top: 0.5em;
+	border: 1px solid $main-color;
+}
 
 .new_article{
 	#article_title {
@@ -31,13 +62,13 @@ body {
 		margin-top: 0.5em;
 	}
 
+
 	.form_subtitle {
 		font-size: 1.2em;
 		color: $hover-color;
 	}
 
 	.submit_buttom {
-		color: red;
 	}
 }
 
@@ -136,6 +167,10 @@ header {
 	}
 }
 
+.home {
+	font-weight: 600;
+}
+
 .home:hover {
 	color: $hover-color;
 }
@@ -143,8 +178,9 @@ header {
 /*STYLING THE COMMENT BOX*/
 
 .comment-section {
-	margin-top: 4em;
+	margin-top: 5em;
 	margin-bottom: 4em;
+	font-size: 0.9em;
 
 	h3 {
 		text-decoration: underline;
@@ -159,6 +195,8 @@ header {
 
 	h4 {
 		margin-bottom: 0;
+		color: $hover-color;
+		font-size: 1.2em;
 	}
 
 	.comment-time {
