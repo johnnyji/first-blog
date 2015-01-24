@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link href="app/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /> <!-- WHY ISNT IT WORKING? -->
 </head>
 <body>
 
@@ -14,7 +15,7 @@
 <%= yield %>
 
 <footer>
-	<p>website proudly developed by: <a href="http://www.johnnyji.com/">johnny ji</a>
+	<p>&copy; website proudly developed by: <a href="http://www.johnnyji.com/">johnny ji</a>
       | <% if logged_in? %>
           <%= "Logged in as #{current_user.email}" %>
           | <%= link_to "logout", logout_path %>
