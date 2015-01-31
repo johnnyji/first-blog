@@ -42,6 +42,11 @@ gem "paperclip"
 
 gem "sorcery"
 
-gem 'sqlite3'
-gem 'pg'
+group :production do
+	gem 'pg'
+end
+
+group :development do
+	gem 'sqlite3'
+end
 
