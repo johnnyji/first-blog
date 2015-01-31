@@ -1,5 +1,5 @@
 <div class="comments">
-	<h4>comment by: &nbsp;&nbsp;<%= comment.author_name %></h4>
+	<h4>comment by: &nbsp;<%= comment.author_name %></h4>
 	
 	<% if logged_in? %>
 		<p><%= link_to 'delete', [comment.article, comment],

@@ -19,11 +19,12 @@ before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def create
 		@article = Article.new(article_params)
-		@article.save
-
-		flash.notice = "You've just posted #{@article.title}"
-
-		redirect_to article_path(@article)
+		if @article.save
+			flash.notice = "You've just posted #{@article.title}"
+			redirect_to article_path(@article)
+		else
+			render("new")
+		end
 	end
 
 	def destroy
@@ -31,7 +32,6 @@ before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 		@article.destroy
 
 		flash.notice = "#{@article.title} has successfully been deleted. Bye bye"
-
 		redirect_to articles_path
 	end
 
