@@ -49,5 +49,3 @@ gem 'pg'
 gem 'taps'
 
 gem 'sqlite3'
-
-gem 'hoptoad_notifier'
