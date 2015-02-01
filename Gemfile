@@ -46,6 +46,6 @@ gem "sorcery"
 
 gem 'pg'
 
-# gem 'taps'
+gem 'taps'
 
-# gem 'sqlite3'
+gem 'sqlite3'
