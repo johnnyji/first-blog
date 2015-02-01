@@ -45,7 +45,5 @@ gem "paperclip"
 gem "sorcery"
 
 gem 'pg'
-
 gem 'taps'
-
-gem 'sqlite3'
+# gem 'sqlite3'
