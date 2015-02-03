@@ -3,11 +3,11 @@
 <%= form_for [@article, @comment] do |f| %>
 	<p class="comment_form">
 		<%= f.label :author_name, "your name", :class => "comment_subtitle" %><br>
-		<%= f.text_field :author_name, :class => "comment_text" %>
+		<%= f.text_field :author_name, :class => "comment_text", placeholder: "What's your name?"%>
 	</p>
 	<p>
 		<%= f.label :body, "your comment", :class => "comment_subtitle" %><br>
-		<%= f.text_area :body, :class => "comment_text" %><br><br>
+		<%= f.text_area :body, :class => "comment_text", placeholder: "Comment here!" %><br><br>
 	</p>
 	<p>
 		<%= f.submit 'submit here', :class => "confirm_button" %>
