@@ -99,9 +99,12 @@ header {
 	margin-top: 2em;
 	font-size: 1.1em;
 
-	h1 {
+	.name-header {
 		text-transform: lowercase;
 		font-size: 2em;
+		a:hover {
+			color: $hover-color;
+		}
 	}
 
 	p {
