@@ -272,3 +272,11 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 500px) {
+	footer {
+		width: 70vw;
+		font-size: 0.7em;
+	}
+
+}
