@@ -75,25 +75,20 @@ body {
 	border: 1px solid $main-color;
 }
 
-.new_article{
-	#article_title {
-		border: 1px solid $main-color;
-		margin-top: 0.5em;
-	}
+#article_title {
+	border: 1px solid $main-color;
+	margin-top: 0.5em;
+}
 
-	#article_body {
-		border: 1px solid $main-color;
-		margin-top: 0.5em;
-	}
+#article_body {
+	border: 1px solid $main-color;
+	margin-top: 0.5em;
+}
 
 
-	.form_subtitle {
-		font-size: 1.2em;
-		color: $hover-color;
-	}
-
-	.submit_buttom {
-	}
+.form_subtitle {
+	font-size: 1.2em;
+	color: $hover-color;
 }
 
 /*STYLING THE MAIN INDEX*/

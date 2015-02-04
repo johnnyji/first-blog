@@ -15,7 +15,13 @@
 <%= render partial: "comments/form" %>
 
 <div class="comment-section">
-	<h3><%= @comments.size %>&nbsp;Comments</h3>
+	<% if @comments.size < 1 %>
+		<h3>No Comments</h3>
+	<% elsif @comments.size == 1 %>
+		<h3><%= @comments.size %>&nbsp;Comment</h3>
+	<% else %>
+		<h3><%= @comments.size %>&nbsp;Comments</h3>
+	<% end %>
 	<%= render partial: "comment", collection: @comments %>
 </div>
 
