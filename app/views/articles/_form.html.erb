@@ -1,9 +1,11 @@
 <%= form_for(@article, html: {multipart: true}) do |f| %>
-	<ul>
-		<% @article.errors.full_messages.each do |error| %>
-		<li><%= error %></li>
-		<% end %>
-	</ul>
+	<% if @article.errors.any? %>
+		<ul>
+			<% @article.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+			<% end %>
+		</ul>
+	<% end %>
 
 	<p>
 		<%= f.label :title, "title", :class => "form_subtitle"%><br>
