@@ -1,9 +1,0 @@
-== README
-
-This is a simple blog I've made for myself to keep track of my thoughts. This is my first venture into using rails and so far I've learnt:
-
-- Relational Databases
-- Converting from SQLite to other DBs
-- Understanding MVC framework
-
-Already lovin' rails ;)
