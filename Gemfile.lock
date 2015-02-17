@@ -29,7 +29,16 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
+    bootsy (2.0.13)
+      carrierwave (~> 0.10)
+      mini_magick (~> 4.0)
+      remotipart (~> 1.2)
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.5)
@@ -58,6 +67,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_magick (4.0.4)
     minitest (5.5.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
@@ -101,6 +111,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    remotipart (1.2.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     sass (3.2.19)
@@ -149,6 +160,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootsy (~> 2.0.13)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
