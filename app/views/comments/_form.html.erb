@@ -1,13 +1,12 @@
-<h3>post a comment</h3>
-
-<%= form_for [@article, @comment] do |f| %>
-	<p class="comment_form">
-		<%= f.label :author_name, "your name", :class => "comment_subtitle" %><br>
-		<%= f.text_field :author_name, :class => "comment_text", placeholder: "What's your name?"%>
-	</p>
-		<%= f.label :body, "your comment", :class => "comment_subtitle" %><br>
-		<%= f.bootsy_area :body %><br><br>
-	<p>
-		<%= f.submit 'submit here', :class => "confirm_button" %>
-	</p>
-<% end %>
+<div class="comment-form">	
+	<h3 class="title">post a comment</h3><br>
+	<%= form_for [@article, @comment] do |f| %>
+		<%= f.label :author_name, "your name", class: "comment-label" %><br>
+		<%= f.text_field :author_name %>
+		<br><br><br>
+		<%= f.label :body, "your comment", class: "comment-label" %><br>
+		<%= f.bootsy_area :body, class: "comment-area" %>
+			<br><br><br>
+		<%= f.submit 'submit here', class: "confirm-button" %>
+	<% end %>
+</div>
