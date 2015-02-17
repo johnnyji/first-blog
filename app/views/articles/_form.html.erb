@@ -8,21 +8,19 @@
 	<% end %>
 
 	<p>
-		<%= f.label :title, "title", :class => "form_subtitle"%><br>
+		<%= f.label :title, "title", class: "form_subtitle"%><br>
 		<%= f.text_field :title %>
 	</p>
-	<p>
-		<%= f.label :body, "content", :class => "form_subtitle" %><br>
-		<%= f.text_area :body %>
-	</p>
+		<%= f.label :body, "content", class: "form_subtitle" %><br>
+		<%= f.bootsy_area :body %>
 	<p class="form_image">
 	  <% if @article.image.exists? %>
 	      <%= image_tag @article.image.url %><br/>
 	  <% end %>
-	  <%= f.label :image, "attach an image", :class => "form_subtitle" %><br />
+	  <%= f.label :image, "attach an image", class: "form_subtitle" %><br />
 	  <%= f.file_field :image %>
 	</p>
 	<p>
-		<%= f.submit 'submit here', :class => "confirm_button" %>
+		<%= f.submit 'submit here', class: "confirm_button" %>
 	</p>
 <% end %>

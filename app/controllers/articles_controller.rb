@@ -48,6 +48,6 @@ before_filter :require_login, except: [:index, :show]
 
 	private
 	def article_params
-		params.require(:article).permit(:title, :body, :image)
+		params.require(:article).permit(:title, :body, :image, :bootsy_image_gallery_id)
 	end
 end

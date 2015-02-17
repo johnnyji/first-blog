@@ -1,11 +1,11 @@
 <div class="current-article">
-	<h1><%= @article.title %></h1>
+	<h1><%= @article.title.html_safe %></h1>
 	<p class="current-article-date"><%= @article.created_at.strftime('%B %d, %Y') %></p>
-	<p class="current-article-body"><%= @article.body %></p>
+	<p class="current-article-body"><%= @article.body.html_safe %></p>
 
 	<p class="current-article-image">
 		<% if @article.image.exists? %>
-      <%= image_tag @article.image.url(:medium)%><br/>
+      <%= image_tag @article.image.url(:medium).html_safe %><br/>
   	<% end %>
 	</p>
 
