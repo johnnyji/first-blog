@@ -67,6 +67,7 @@ body.comment-area.bootsy_text_area.wysihtml5-editor {
 	#comment_author_name {
 		border: 1px solid $light-color;
 		border-radius: 5px;
+		width: 25vw;
 	}
 
 	.wysihtml5-toolbar {
@@ -95,30 +96,38 @@ body.comment-area.bootsy_text_area.wysihtml5-editor {
 		text-decoration: none;
 		text-transform: lowercase;
 		margin-bottom: 3em;
+		font-size: 2em;
 	}
 }
 
 .comments {
-	border-bottom: 1px solid $main-color;
+	border-bottom: 1px solid $light-color;
 	width: 40vw;
 	margin-bottom: 3em;
 
 	h4 {
-		margin-bottom: 0;
+		display: inline-block;
+		margin: 0 0.5em 0 0;
 		color: $hover-color;
+		font-size: 1.5em;
+	}
+
+	.delete {
+		display: inline-block;
 		font-size: 1.2em;
 	}
 
 	.comment-time {
 		margin-top: 0.5em;
 		margin-bottom: 1em;
+		font-size: 1.2em;
 		color: gray;
 	}
 }
 
 .comment-body {
-	color: black;
-	font-family: arial;
+	color: $main-color;
+	font-size: 1.1em;
 	a {
 		color: inherit;
 		text-decoration: none;

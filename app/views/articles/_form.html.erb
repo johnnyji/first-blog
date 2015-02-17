@@ -1,26 +1,20 @@
-<%= form_for(@article, html: {multipart: true}) do |f| %>
-	<% if @article.errors.any? %>
-		<ul>
-			<% @article.errors.full_messages.each do |error| %>
-			<li><%= error %></li>
-			<% end %>
-		</ul>
-	<% end %>
 
-	<p>
-		<%= f.label :title, "title", class: "form_subtitle"%><br>
-		<%= f.text_field :title %>
-	</p>
-		<%= f.label :body, "content", class: "form_subtitle" %><br>
-		<%= f.bootsy_area :body %>
-	<p class="form_image">
-	  <% if @article.image.exists? %>
-	      <%= image_tag @article.image.url %><br/>
-	  <% end %>
-	  <%= f.label :image, "attach an image", class: "form_subtitle" %><br />
-	  <%= f.file_field :image %>
-	</p>
-	<p>
-		<%= f.submit 'submit here', class: "confirm_button" %>
-	</p>
-<% end %>
+<div class="comment-form">
+	<%= form_for(@article, html: {multipart: true}) do |f| %>
+		<% if @article.errors.any? %>
+			<ul>
+				<% @article.errors.full_messages.each do |error| %>
+				<li><%= error %></li>
+				<% end %>
+			</ul>
+		<% end %>
+			<%= f.label :title, "article title", class: "comment-label"%><br>
+			<%= f.text_field :title %>
+				<br><br><br>
+			<%= f.label :body, "content", class: "comment-label" %><br>
+			<%= f.bootsy_area :body, class: "comment-area" %>
+				<br><br><br>
+			<%= f.submit 'submit here', class: "confirm-button" %>
+		</p>
+	<% end %>
+</div>

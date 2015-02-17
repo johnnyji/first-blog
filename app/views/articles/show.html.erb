@@ -12,11 +12,9 @@
 
 </div>
 
-<%= render partial: "comments/form" %>
-
 <div class="comment-section">
 	<% if @comments.size < 1 %>
-		<h3>No Comments</h3>
+		<h3>No Comments yet</h3>
 	<% elsif @comments.size == 1 %>
 		<h3><%= @comments.size %>&nbsp;Comment</h3>
 	<% else %>
@@ -25,12 +23,12 @@
 	<%= render partial: "comment", collection: @comments %>
 </div>
 
+<%= render partial: "comments/form" %>
+
 <!-- only show if user is logged in  -->
 <% if logged_in? %>
 	<%= link_to "edit post", edit_article_path(@article) %><br>
 	<%= link_to "delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"} %><br><br>
 <% end %>
 
-<div class="home">
-	<%= link_to "go back", articles_path, class: "confirm_button" %>
-</div>
+<%= link_to "go back", articles_path, class: "confirm-button" %>

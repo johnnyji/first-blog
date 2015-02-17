@@ -1,5 +1,4 @@
-<div class="comment-form">	
-	<h3 class="title">post a comment</h3><br>
+<div class="comment-form">
 	<%= form_for [@article, @comment] do |f| %>
 		<%= f.label :author_name, "your name", class: "comment-label" %><br>
 		<%= f.text_field :author_name %>

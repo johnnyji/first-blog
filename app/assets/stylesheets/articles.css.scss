@@ -1,6 +1,12 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 $main-color: #202020;
 $hover-color: #2980b9;
-$border-color: #3498db;
+$border-color: gray;
+$light-color: #bdc3c7;
+$cloud-color: #ecf0f1;
 
 @mixin fade {
 	-webkit-transition: all 0.5s ease;
@@ -43,13 +49,20 @@ html {
 
 .confirm-button {
 	@include fade;
+	display: inline-block;
 	font-size: 1.1em;
 	border: none;
 	color: #fff;
 	padding: 0.5em;
 	background-color: $hover-color;
 	&:hover {
-		border-bottom: 3px solid $border-color;
+		background-color: $border-color;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 
@@ -175,6 +188,7 @@ header {
 
 	.current-article-body {
 		margin-bottom: 5em;
+		width: 80%;
 		white-space: pre-wrap;
 	}
 
@@ -182,14 +196,6 @@ header {
 		width: 30vw;
 		height: auto;
 	}
-}
-
-.home {
-	font-weight: 600;
-}
-
-.home:hover {
-	color: $hover-color;
 }
 
 /*FOOTER*/
@@ -220,6 +226,47 @@ footer {
 	footer {
 		width: 70vw;
 		font-size: 0.7em;
+	}
+
+}
+
+
+/*ARTICLE FORM*/
+
+body.comment-area.bootsy_text_area.wysihtml5-editor {
+	left: 0;
+	width: 100%;
+}
+
+.comment-form {
+	.comment-area {
+		width: 40vw;
+		height: 50vh;
+	}
+
+	.comment-label {
+		color: $hover-color;
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+
+	#article_title {
+		border: 1px solid $light-color;
+		border-radius: 5px;
+		width: 25vw;
+	}
+
+	.wysihtml5-toolbar {
+		width: 40vw;
+	}
+
+	.bootsy_text_area {
+		margin-left: 0;
+	}
+
+	textarea {
+		border: 1px solid $light-color;
+		border-radius: 5px;
 	}
 
 }
