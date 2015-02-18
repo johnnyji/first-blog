@@ -2,9 +2,9 @@
 	<%= form_for [@article, @comment] do |f| %>
 		<%= f.label :author_name, "your name", class: "comment-label" %><br>
 		<%= f.text_field :author_name %>
-		<br><br><br>
+		<br><br>
 		<%= f.label :body, "your comment", class: "comment-label" %><br>
-		<%= f.bootsy_area :body, class: "comment-area" %>
+		<%= f.text_area :body, class: "comment-area" %>
 			<br><br><br>
 		<%= f.submit 'submit here', class: "confirm-button" %>
 	<% end %>

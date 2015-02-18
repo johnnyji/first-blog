@@ -1,5 +1,14 @@
 <div class="current-article">
 	<h1><%= @article.title.html_safe %></h1>
+
+	<% if logged_in? %>
+		<div class="edit-delete">
+			<%= link_to "edit post", edit_article_path(@article), class: "confirm-button" %>
+			&nbsp;
+			<%= link_to "delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"}, class: "confirm-button" %>
+		</div>
+	<% end %>
+
 	<p class="current-article-date"><%= @article.created_at.strftime('%B %d, %Y') %></p>
 	<p class="current-article-body"><%= @article.body.html_safe %></p>
 
@@ -24,11 +33,5 @@
 </div>
 
 <%= render partial: "comments/form" %>
-
-<!-- only show if user is logged in  -->
-<% if logged_in? %>
-	<%= link_to "edit post", edit_article_path(@article) %><br>
-	<%= link_to "delete post", article_path(@article), method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"} %><br><br>
-<% end %>
 
 <%= link_to "go back", articles_path, class: "confirm-button" %>

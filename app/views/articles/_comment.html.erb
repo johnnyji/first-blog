@@ -1,9 +1,8 @@
 <div class="comments">
 	<h4><%= comment.author_name %></h4>
+	
 	<% if logged_in? %>
-		<div class="confirm-button">
-			<%= link_to 'delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
-		</div>
+	<%= link_to 'delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "confirm-button" %>
 	<% end %>
 	
 	<p class="comment-time">posted <%= time_ago_in_words(comment.created_at) %> ago</p>

@@ -21,6 +21,8 @@
 $main-color: #202020;
 $hover-color: #2980b9;
 $border-color: gray;
+$light-color: #bdc3c7;
+$cloud-color: #ecf0f1;
 
 @mixin fade {
 	-webkit-transition: all 0.5s ease;
@@ -31,20 +33,26 @@ $border-color: gray;
 
 * {
 	font-family: 'Lato', arial;
-	box-sizing: border-box;
 	
 	a {
 		color: inherit;
 		text-decoration: none;
-		&:hover {
+		&:hover, &:focus, &:visited, &:active {
 			text-decoration: none;
 		}
 	}
 }
 
-body {
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
 	position: relative;
-	left: 10%;
+	left: 0;
 	
 	width: 80vw;
 	height: auto;
@@ -56,4 +64,8 @@ body {
 	color: $hover-color;
 	margin: 2em 0 2em 0;
 	font-size: 1.2em;
+}
+
+footer {
+	font-size: 1.1em;
 }

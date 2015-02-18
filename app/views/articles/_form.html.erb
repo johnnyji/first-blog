@@ -1,5 +1,5 @@
 
-<div class="comment-form">
+<div class="article-form">
 	<%= form_for(@article, html: {multipart: true}) do |f| %>
 		<% if @article.errors.any? %>
 			<ul>
@@ -8,11 +8,11 @@
 				<% end %>
 			</ul>
 		<% end %>
-			<%= f.label :title, "article title", class: "comment-label"%><br>
+			<%= f.label :title, "article title", class: "article-label"%><br>
 			<%= f.text_field :title %>
 				<br><br><br>
-			<%= f.label :body, "content", class: "comment-label" %><br>
-			<%= f.bootsy_area :body, class: "comment-area" %>
+			<%= f.label :body, "content", class: "article-label" %><br>
+			<%= f.bootsy_area :body, class: "article-area" %>
 				<br><br><br>
 			<%= f.submit 'submit here', class: "confirm-button" %>
 		</p>

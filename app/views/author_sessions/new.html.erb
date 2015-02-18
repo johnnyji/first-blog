@@ -2,21 +2,20 @@
 
 <%= form_tag author_sessions_path, method: :post do %>
   <div class="field">
-    <%= label_tag :email, "email", :class => "field_name" %><br>
+    <%= label_tag :email, "email", class: "field_name" %><br>
     <%= text_field_tag :email %>
     <br/>
   </div>
   <br>
   <div class="field">
-    <%= label_tag :password, "password", :class => "field_name" %><br>
+    <%= label_tag :password, "password", class: "field_name" %><br>
     <%= password_field_tag :password %>
     <br/>
   </div>
   <br><br>
   <div class="actions">
-    <%= submit_tag "enter", :class => "confirm_button" %>
+    <%= submit_tag "enter", class: "confirm-button" %>
   </div>
 <% end %>
 
-<br>
-<%= link_to 'go back', articles_path, class: "confirm_button" %>
+<%= link_to 'go back', articles_path, class: "confirm-button" %>

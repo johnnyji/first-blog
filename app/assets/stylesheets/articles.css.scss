@@ -45,6 +45,7 @@ html {
 	color: $hover-color;
 }
 
+
 /*FORMS*/
 
 .confirm-button {
@@ -54,15 +55,12 @@ html {
 	border: none;
 	color: #fff;
 	padding: 0.5em;
+	margin-bottom: 1em;
 	background-color: $hover-color;
+	text-transform: lowercase;
 	&:hover {
 		background-color: $border-color;
-	}
-	a {
 		color: #fff;
-		&:hover {
-			color: #fff;
-		}
 	}
 }
 
@@ -178,6 +176,13 @@ header {
 
 	h1 {
 		margin-bottom: 0.5em;
+		display: inline-block;
+	}
+
+	.edit-delete {
+		display: inline-block;
+		margin-left: 1em;
+		font-size: 0.8em;
 	}
 
 	.current-article-date {
@@ -232,19 +237,24 @@ footer {
 
 
 /*ARTICLE FORM*/
-
-body.comment-area.bootsy_text_area.wysihtml5-editor {
-	left: 0;
-	width: 100%;
+body.article-area.bootsy_text_area.wysihtml5-editor {
+left: 0;
+width: 100%;
+border: none;
 }
 
-.comment-form {
-	.comment-area {
+iframe.wysihtml5-sandbox {
+	border: none;
+	box-shadow: 2px 2px 2px red;
+}
+
+.article-form {
+	.article-area {
 		width: 40vw;
 		height: 50vh;
 	}
 
-	.comment-label {
+	.article-label {
 		color: $hover-color;
 		font-size: 1.5em;
 		font-weight: 400;
