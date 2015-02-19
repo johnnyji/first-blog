@@ -128,6 +128,7 @@ header {
 
 	height: auto;
 	min-height: 100vh;
+	font-size: 1.2em;
 
 	h3 {
 		margin-bottom: 0.5em;
@@ -140,29 +141,6 @@ header {
 	p {
 		color: gray;
 		margin: 0;
-	}
-}
-
-/*NEW PAGE*/
-
-.new-post {
-	width: 80vw;
-	height: auto;
-	min-height: 85vh;
-	
-	h1 {
-		text-transform: lowercase;
-		margin-top: 2em;
-		margin-bottom: 1em;
-	}
-
-	.form_image {
-		margin-top: 10vh;
-		margin-bottom: 10vh;
-
-		#article_image {
-			margin-top: 0.5em;
-		}
 	}
 }
 
@@ -243,12 +221,12 @@ width: 100%;
 border: none;
 }
 
-iframe.wysihtml5-sandbox {
+form {
 	border: none;
-	box-shadow: 2px 2px 2px red;
-}
 
-.article-form {
+	h1 {
+		margin: 1em 0 1em 0;
+	}
 	.article-area {
 		width: 40vw;
 		height: 50vh;
@@ -262,7 +240,6 @@ iframe.wysihtml5-sandbox {
 
 	#article_title {
 		border: 1px solid $light-color;
-		border-radius: 5px;
 		width: 25vw;
 	}
 
@@ -272,11 +249,10 @@ iframe.wysihtml5-sandbox {
 
 	.bootsy_text_area {
 		margin-left: 0;
+		border: 1px solid $light-color;
 	}
 
 	textarea {
-		border: 1px solid $light-color;
-		border-radius: 5px;
+		border: none;
 	}
-
 }
