@@ -14,7 +14,5 @@ gem 'paperclip'
 gem "sorcery"
 gem 'pg'
 gem 'taps'
-
 gem 'bootstrap-sass', '~> 3.3.3'
-
 gem 'bootsy', '~> 2.0.13'

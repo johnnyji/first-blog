@@ -3,9 +3,9 @@
 
 	<% if logged_in? %>
 		<div class="edit-delete">
-			<%= link_to "edit post", edit_article_path, class: "confirm-button" %>
+			<%= link_to "edit post", edit_article_path(@article) , class: "confirm-button" %>
 			&nbsp;
-			<%= link_to "delete post", article_path, method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"}, class: "confirm-button" %>
+			<%= link_to "delete post", article_path(@article) , method: :delete, data: {confirm: "You sure? Once you delete it... It's gone forever!"}, class: "confirm-button" %>
 		</div>
 	<% end %>
 
