@@ -1,27 +1,7 @@
 // Place all the styles related to the author controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-$main-color: #202020;
-$hover-color: #2980b9;
-$border-color: gray;
-
-@mixin fade {
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
-* {
-	font-family: 'Lato', arial;
-	box-sizing: border-box;
-	
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
+@import "appwide";
 
 body {
 	position: relative;

@@ -39,10 +39,31 @@ html, body {
     }
     &:focus, &:visited {
       color: inherit;
+      text-decoration: none;
     }
   }
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+  a {
+
+  }
+}
+
+.app-wrapper {
+  position: relative;
+  left: 0;
+  width: 70vw;
+  height: auto;
+  .flash {
+    color: $hover-color;
+    margin: 2em 0 2em 0;
+    font-size: 1.2em;
+  }
+  footer {  
+    height: auto;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+  }
 }

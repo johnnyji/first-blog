@@ -18,21 +18,3 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "appwide";
-
-.wrapper {
-	position: relative;
-	left: 0;
-	width: 70vw;
-	height: auto;
-}
-
-.flash {
-	color: $hover-color;
-	margin: 2em 0 2em 0;
-	font-size: 1.2em;
-}
-
-footer {	
-	height: auto;
-	font-size: 1.1em;
-}
