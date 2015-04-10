@@ -1,0 +1,120 @@
+/*FORMS*/
+@import "appwide";
+
+// COMMENT FORM
+.comment-form {
+  .comment-area-name {
+    font-size: 1.2em;
+    height: 30px;
+    width: 280px;
+    outline: none;
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    background-color: $border-color;
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+  .comment-area {
+    font-size: 1.2em;
+    min-width: 280px;
+    min-height: 150px;
+    padding-left: 0.5em;
+    background-color: $border-color;
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+}
+
+.confirm-button {
+  @include transition;
+  display: inline-block;
+  font-size: 1.1em;
+  border: none;
+  color: $white;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  background-color: $text-color;
+  text-transform: lowercase;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.field_name {
+  color: $hover-color;
+  font-size: 1.2em;
+}
+
+#email {
+  margin-top: 0.5em;
+  border: 1px solid $text-color;
+}
+
+#password {
+  margin-top: 0.5em;
+  border: 1px solid $text-color;
+}
+
+#article_title {
+  border: 1px solid $text-color;
+  margin-top: 0.5em;
+}
+
+#article_body {
+  border: 1px solid $text-color;
+  margin-top: 0.5em;
+}
+
+
+.form_subtitle {
+  font-size: 1.2em;
+  color: $hover-color;
+}
+
+
+/*ARTICLE FORM*/
+body.article-area.bootsy_text_area.wysihtml5-editor {
+left: 0;
+width: 100%;
+border: none;
+}
+
+form {
+  border: none;
+
+  h1 {
+    margin: 1em 0 1em 0;
+  }
+  .article-area {
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .article-label {
+    color: $hover-color;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+
+  #article_title {
+    border: 1px solid $light-text-color;
+    width: 25vw;
+  }
+
+  .wysihtml5-toolbar {
+    width: 40vw;
+  }
+
+  .bootsy_text_area {
+    margin-left: 0;
+    border: 1px solid $light-text-color;
+  }
+
+  textarea {
+    border: none;
+  }
+}

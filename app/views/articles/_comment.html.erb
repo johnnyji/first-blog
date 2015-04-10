@@ -1,10 +1,11 @@
-<div class="comments">
-	<h4><%= comment.author_name %></h4>
+<div class="comment">
+	<h4 class="author-name"><%= comment.author_name %></h4>
 	
 	<% if logged_in? %>
-	<%= link_to 'delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "confirm-button" %>
+	 <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "confirm-button" %>
+	<% else %>
+    <p class="comment-time">posted <%= time_ago_in_words(comment.created_at) %> ago</p>
 	<% end %>
-	
-	<p class="comment-time">posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+  
 	<p class="comment-body"><%= comment.body.html_safe %></p>
 </div>

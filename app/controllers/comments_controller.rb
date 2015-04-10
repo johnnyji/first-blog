@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 	def create
 		@comment = Comment.new(comment_params)
 		@comment.article_id = params[:article_id]
-		@comment.save ? redirect_with_message('Thanks for the comment!') : redirect_with_message('You\'re comment wasn\'t properly saved!')
+		@comment.save ? redirect_to(article_path(@comment.article), notice: 'Thanks for the comment!') : redirect_to(article_path(@comment.article), notice: 'You\'re comment wasn\'t properly saved!')
 	end
 
 	def destroy

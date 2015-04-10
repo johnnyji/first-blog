@@ -4,99 +4,54 @@
 
 @import "appwide";
 
-/*COMMENT FORM*/
-
-body.comment-area.bootsy_text_area.wysihtml5-editor {
-	left: 0;
-	width: 100%;
-}
-
-.comment-form {
-	.comment-area {
-		min-width: 25vw;
-		min-height: 20vh;
-	}
-
-	.comment-label {
-		color: $hover-color;
-		font-size: 1.5em;
-		font-weight: 400;
-	}
-
-	#comment_author_name {
-		border: 1px solid tomato;
-		min-width: 15vw;
-	}
-
-	.wysihtml5-toolbar {
-		width: 40vw;
-	}
-
-	.bootsy_text_area {
-		margin-left: 0;
-	}
-
-	textarea {
-		border: 1px solid tomato;
-	}
-
-}
-
-/*COMMENT SECTION*/
+// INDIVIDUAL COMMENT
 
 .comment-section {
-	margin: 5em 0 5em 0;
-	font-size: 0.9em;
-
+	margin: 3em 0 4em 0;
 	h3 {
-		text-decoration: none;
-		text-transform: lowercase;
-		margin-bottom: 3em;
+		margin: 2em 0;
 		font-size: 2em;
+		font-weight: 600;
+		color: $text-color;
 	}
-}
-
-.comments {
-	border-bottom: 1px solid tomato;
-	width: 40vw;
-	margin-bottom: 3em;
-
-	h4 {
-		display: inline-block;
-		margin: 0 0.5em 0 0;
-		color: $hover-color;
-		font-size: 1.5em;
+		.comment {
+		width: 70%;
+		font-weight: 300;
+		margin-bottom: 3em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid $border-color;
+		@include medium-viewport {
+			width: 90%;
+		}
+		@include mobile-viewport {
+			width: 100%;
+		}
+		.author-name {
+			font-weight: 400;
+			display: inline-block;
+			margin: 0 0.5em 1em 0;
+			font-size: 1.3em;
+			color: $hover-color;
+		}
+		.comment-time {
+			display: inline-block;
+			color: $light-text-color;
+			font-size: 1.1em;
+		}
+		.comment-body {
+			color: $text-color;
+			font-size: 1.1em;
+		}
 	}
 
-	.delete {
-		display: inline-block;
-		font-size: 1.2em;
-	}
-
-	.comment-time {
-		margin-top: 0.5em;
-		margin-bottom: 1em;
-		font-size: 1.2em;
-		color: gray;
-	}
-}
-
-.comment-body {
-	color: $text-color;
-	font-size: 1.1em;
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
-.new-article a {
-	background-color: $hover-color;
-	padding: 0.8em;
-	color: white;
-	text-transform: lowercase;
-	@include transition;
-	&:hover {
-		box-shadow: 0px 5px 0px $border-color;
-	}
+		// .new-article a {
+		// 	background-color: $hover-color;
+		// 	padding: 0.8em;
+		// 	color: white;
+		// 	text-transform: lowercase;
+		// 	@include transition;
+		// 	&:hover {
+		// 		box-shadow: 0px 5px 0px $border-color;
+		// 	}
+		// }
 }

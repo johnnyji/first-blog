@@ -9,7 +9,7 @@
 // HEADER OF THE SITE
 header {
 	width: 100%;
-	margin: 2.5em 0 2em 0;
+	margin: 2.5em 0 1.5em 0;
 	font-size: 1.4em;
 	color: $text-color;
 	@include medium-viewport {
@@ -25,7 +25,9 @@ header {
 		font-size: 2.5em;
 		margin-bottom: 0.5em;
 		@include mobile-viewport {
-			font-size: 2.7em;
+			font-size: 3em;
+			margin: 0 auto;
+			text-align: center;
 		}
 		a {
 			@include transition;
@@ -44,8 +46,14 @@ header {
 		b {
 			color: $text-color;	
 		}
+		a:hover {
+			color: $hover-color;
+		}
+		@include medium-viewport {
+			width: 95%;
+		}
 		@include mobile-viewport {
-			width: 90%;
+			display: none;
 		}
 	}
 }
@@ -54,7 +62,6 @@ header {
 .articles-container {
 	@include mobile-viewport {
 		width: 100%;
-		font-size: 0.925em;
 	}
 	.article {
 		padding: 2em 0;
@@ -74,6 +81,7 @@ header {
 			color: $light-text-color;
 			font-size: 0.95em;
 			margin-bottom: 1em;
+			line-height: 2;
 		}
 		.article-body {
 			max-width: 500px;
@@ -88,66 +96,17 @@ header {
 	}
 }
 
-
-/*FORMS*/
-
-.confirm-button {
-	@include transition;
-	display: inline-block;
-	font-size: 1.1em;
-	border: none;
-	color: #fff;
-	padding: 0.5em;
-	margin-bottom: 1em;
-	background-color: $hover-color;
-	text-transform: lowercase;
-	&:hover {
-		background-color: $border-color;
-		color: #fff;
-	}
-}
-
-.field_name {
-	color: $hover-color;
-	font-size: 1.2em;
-}
-
-#email {
-	margin-top: 0.5em;
-	border: 1px solid $text-color;
-}
-
-#password {
-	margin-top: 0.5em;
-	border: 1px solid $text-color;
-}
-
-#article_title {
-	border: 1px solid $text-color;
-	margin-top: 0.5em;
-}
-
-#article_body {
-	border: 1px solid $text-color;
-	margin-top: 0.5em;
-}
-
-
-.form_subtitle {
-	font-size: 1.2em;
-	color: $hover-color;
-}
-
-/*SHOW PAGE*/
-
+// SHOW PAGE
 .current-article {
 	font-size: 1.1em;
-	width: 70vw;
+	font-weight: 300;
+	line-height: 1.7;
+	width: 100%;
 	margin-top: 3em;
-	margin-bottom: 6em;
-
-	h1 {
-		margin-bottom: 0.5em;
+	margin-bottom: 5em;
+	.title {
+		color: $text-color;
+		margin-bottom: 0.6em;
 		display: inline-block;
 	}
 
@@ -158,14 +117,14 @@ header {
 	}
 
 	.current-article-date {
+		font-weight: 400;
 		margin-top: 0;
 		margin-bottom: 3em;
-		color: gray;
+		color: $light-text-color;
 	}
 
 	.current-article-body {
 		margin-bottom: 5em;
-		width: 80%;
 		white-space: pre-wrap;
 		line-height: 1.4;
 	}
@@ -173,81 +132,5 @@ header {
 	.current-article-image {
 		width: 30vw;
 		height: auto;
-	}
-}
-
-/*FOOTER*/
-
-footer {
-	position: relative;
-	bottom: 0;
-	height: 10vh;
-	margin-top: 10vh;
-
-	p {
-		position: absolute;
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
-		top: 50%;
-		margin: 0;
-		color: gray;
-
-		a:hover {
-			color: $hover-color;
-		}
-	}
-}
-
-@media (max-width: 500px) {
-	footer {
-		width: 70vw;
-		font-size: 0.7em;
-	}
-
-}
-
-
-/*ARTICLE FORM*/
-body.article-area.bootsy_text_area.wysihtml5-editor {
-left: 0;
-width: 100%;
-border: none;
-}
-
-form {
-	border: none;
-
-	h1 {
-		margin: 1em 0 1em 0;
-	}
-	.article-area {
-		width: 40vw;
-		height: 50vh;
-	}
-
-	.article-label {
-		color: $hover-color;
-		font-size: 1.5em;
-		font-weight: 400;
-	}
-
-	#article_title {
-		border: 1px solid $light-text-color;
-		width: 25vw;
-	}
-
-	.wysihtml5-toolbar {
-		width: 40vw;
-	}
-
-	.bootsy_text_area {
-		margin-left: 0;
-		border: 1px solid $light-text-color;
-	}
-
-	textarea {
-		border: none;
 	}
 }
