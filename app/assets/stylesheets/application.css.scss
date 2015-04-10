@@ -17,48 +17,13 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-$main-color: #202020;
-$hover-color: #2980b9;
-$border-color: gray;
-$light-color: #bdc3c7;
-$cloud-color: #ecf0f1;
-
-@mixin fade {
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
-* {
-	font-family: 'Lato', arial;
-	font-weight: 500;
-	
-	a {
-		color: inherit;
-		text-decoration: none;
-		&:hover, &:focus, &:visited, &:active {
-			text-decoration: none;
-		}
-	}
-}
-
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+@import "appwide";
 
 .wrapper {
 	position: relative;
 	left: 0;
-	
-	width: 80vw;
+	width: 70vw;
 	height: auto;
-	min-height: 100vh;
-	color: #202020;
 }
 
 .flash {
@@ -67,6 +32,7 @@ html {
 	font-size: 1.2em;
 }
 
-footer {
+footer {	
+	height: auto;
 	font-size: 1.1em;
 }

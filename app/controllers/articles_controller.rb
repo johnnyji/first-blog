@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-include ArticlesHelper
 before_filter :require_login, except: [:index, :show]
 
 	def index
@@ -34,7 +33,7 @@ before_filter :require_login, except: [:index, :show]
 
 	def update
 		@article = Article.find(params[:id])
-		@article.update_attributes(article_params) #is there a difference between update & update_attributes?
+		@article.update_attributes(article_params)
 		flash.notice = "#{@article.title} has successfully been updated!"
 		redirect_to article_path(@article)
 	end

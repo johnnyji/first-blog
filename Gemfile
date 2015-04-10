@@ -8,7 +8,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 gem 'paperclip'
 gem "sorcery"
@@ -16,3 +15,7 @@ gem 'pg'
 gem 'taps'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootsy', '~> 2.0.13'
+
+group :development, :test do
+  gem 'spring'
+end

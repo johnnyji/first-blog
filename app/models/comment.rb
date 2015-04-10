@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-	validates_presence_of :author_name, :body
   belongs_to :article
+	validates_presence_of :author_name, :body
 end

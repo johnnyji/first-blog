@@ -1,0 +1,48 @@
+$main-color: #202020;
+$hover-color: #2980b9;
+$border-color: gray;
+$light-text-color: #666;
+$cloud-color: #ecf0f1;
+
+// VIEWPORT MIXINS
+
+@mixin mobile-viewport {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin medium-viewport {
+  @media (min-width: 401px) and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin fade {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #666;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:active {
+      color: $hover-color;
+      text-decoration: none;
+    }
+    &:focus, &:visited {
+      color: inherit;
+    }
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

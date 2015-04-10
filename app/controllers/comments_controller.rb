@@ -4,13 +4,7 @@ class CommentsController < ApplicationController
 	def create
 		@comment = Comment.new(comment_params)
 		@comment.article_id = params[:article_id]
-		if @comment.save
-			flash.notice = "thanks for the comment!"
-			redirect_to article_path(@comment.article)
-		else
-			redirect_to article_path(@comment.article)
-			flash.notice = "your comment wasn't saved properly!"
-		end
+		@comment.save ? redirect_with_message('Thanks for the comment!') : redirect_with_message('You\'re comment wasn\'t properly saved!')
 	end
 
 	def destroy
@@ -21,7 +15,13 @@ class CommentsController < ApplicationController
 	end
 
 	private
+
 	def comment_params
 		params.require(:comment).permit(:author_name, :body)
 	end
+
+	def refresh_with_message(message)
+		redirect_to article_path(@comment.article), notice: message
+	end
+	
 end

@@ -1,20 +1,23 @@
 <header>
-	<h1 class="name-header"><a href="http://www.johnnyji.com/" target="_blank">johnny ji.</a></h1>
-	<p class="social-icons">
+	<h1 class="name"><a href="http://www.johnnyji.com/" target="_blank">johnny ji.</a></h1>
+	<div class="social-icons">
 		<a href="http://www.facebook.com/Magic.Finger" target="_blank" ><i class="fa fa-facebook"></i></a>
 		<a href="https://twitter.com/johnnyisji" target="_blank" ><i class="fa fa-twitter"></i></a>
 		<a href="http://www.instagram.com/johnnayjay" target="_blank" ><i class="fa fa-instagram"></i></a>
 		<a href="http://ca.linkedin.com/pub/johnny-ji/92/1b8/981" target="_blank" ><i class="fa fa-linkedin"></i></a>
 		<a href="https://github.com/johnnyji/" target="_blank" ><i class="fa fa-github"></i></a>
-	</p>
+	</div>
 </header>
 
 <br>
 
-<div class="articles">
+<div class="articles-container">
 	<% @articles.each do |article| %>
-		<h3><%= link_to article.title, article_path(article)%></h3>
-		<p><%= link_to article.created_at.strftime("%B %d, %Y"), article_path(article) %></p><br>
+		<div class="article">
+			<h3 class='article-title'><%= link_to article.title, article_path(article)%></h3>
+			<p class='article-date'><%= article.created_at.strftime("%B %d, %Y") %></p>
+			<p class="article-body"><%= truncate(article.body.html_safe, length: 100, omission: '		', escape: false) { link_to '<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>'.html_safe, article_path(article) }%></p>
+		</div>
 	<% end %>
 </div>
 

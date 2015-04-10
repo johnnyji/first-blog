@@ -8,12 +8,12 @@ class AuthorSessionsController < ApplicationController
 			flash.notice = "Welcome back Johnny ;)"
 		else
 			flash.now.alert = "Login failed!"
-			render action: :new
+			render "new"
 		end
 	end
 
 	def destroy 
 		logout
-		redirect_to(:authors, notice: 'Logged out!')
+		redirect_to :authors, notice: 'Logged out!'
 	end
 end
