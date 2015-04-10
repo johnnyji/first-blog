@@ -1,6 +1,6 @@
-$text-color: #696969;
-$title-color: #A38E79;
-$hover-color: #2980b9;
+$text-color: #34495E;
+$title-color: #34495E;
+$hover-color: #446CB3;
 $border-color: #DBDBDB;
 $light-text-color: #666;
 $cloud-color: #ecf0f1;
@@ -76,7 +76,12 @@ html, body {
   footer {  
     height: auto;
     font-size: 1.1em;
+    font-weight: 300;
     margin-bottom: 2em;
+    a {
+      color: $text-color;
+      font-weight: 400
+    }
     @include medium-viewport {
       font-size: 1em;
     }
