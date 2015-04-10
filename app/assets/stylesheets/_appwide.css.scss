@@ -1,6 +1,7 @@
-$main-color: #202020;
+$text-color: #696969;
+$title-color: #A38E79;
 $hover-color: #2980b9;
-$border-color: gray;
+$border-color: #DBDBDB;
 $light-text-color: #666;
 $cloud-color: #ecf0f1;
 
@@ -18,11 +19,11 @@ $cloud-color: #ecf0f1;
   }
 }
 
-@mixin fade {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 html, body {
@@ -54,8 +55,19 @@ html, body {
 .app-wrapper {
   position: relative;
   left: 0;
-  width: 70vw;
+  width: 65vw;
+  max-width: 800px;
   height: auto;
+  @include medium-viewport {
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  @include mobile-viewport {
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+  }
   .flash {
     color: $hover-color;
     margin: 2em 0 2em 0;
@@ -65,5 +77,11 @@ html, body {
     height: auto;
     font-size: 1.1em;
     margin-bottom: 2em;
+    @include medium-viewport {
+      font-size: 1em;
+    }
+    @include mobile-viewport {
+      display: none;
+    }
   }
 }

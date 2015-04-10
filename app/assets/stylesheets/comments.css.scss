@@ -82,7 +82,7 @@ body.comment-area.bootsy_text_area.wysihtml5-editor {
 }
 
 .comment-body {
-	color: $main-color;
+	color: $text-color;
 	font-size: 1.1em;
 	a {
 		color: inherit;
@@ -95,7 +95,7 @@ body.comment-area.bootsy_text_area.wysihtml5-editor {
 	padding: 0.8em;
 	color: white;
 	text-transform: lowercase;
-	@include fade;
+	@include transition;
 	&:hover {
 		box-shadow: 0px 5px 0px $border-color;
 	}

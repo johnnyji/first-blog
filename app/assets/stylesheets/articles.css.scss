@@ -6,37 +6,77 @@
 
 /*STYLING THE MAIN INDEX*/
 
+// HEADER OF THE SITE
 header {
-	width: 60%;
-	margin: 2em 0 1em 0;
+	width: 100%;
+	margin: 2.5em 0 2em 0;
 	font-size: 1.4em;
-	.name {
-		font-size: 2em;
+	color: $text-color;
+	@include medium-viewport {
+		font-size: 1.3em;
+		width: 70vw;
+	}
+	@include mobile-viewport {
+		font-size: 1.2em;
+		width: 100%;
 	}
 	.social-icons {
-		font-size: 1.3em;
+		color: $title-color;
+		font-size: 2.5em;
+		margin-bottom: 0.5em;
+		@include mobile-viewport {
+			font-size: 2.7em;
+		}
 		i {
-			padding-right: 0.5em;
+			padding-right: 0.3em;
+		}
+	}
+	.intro {
+		@include transition;
+		width: 70%;
+		font-weight: 300;
+		font-size: 0.9em;
+		color: $light-text-color;
+		b {
+			color: $text-color;	
+		}
+		@include mobile-viewport {
+			width: 90%;
 		}
 	}
 }
 
+// INDIVIDUAL ARTICLE
 .articles-container {
+	@include mobile-viewport {
+		width: 100%;
+		font-size: 0.925em;
+	}
 	.article {
-		margin-bottom: 2.5em;
+		padding: 2em 0;
+		border-top: 1px solid $border-color;
 		.article-title {
+			color: $text-color;
+			font-weight: bold;
 			margin-bottom: 0.5em;
-		}
-		.article-body {
-			width: 400px;
-			color: $light-text-color;
-			i {
-				font-size: 0.2em;
-				padding-right: 0.7em;
+			a:hover {
+				color: $title-color;
 			}
 		}
 		.article-date {
 			color: $light-text-color;
+			font-size: 0.95em;
+			margin-bottom: 1em;
+		}
+		.article-body {
+			max-width: 500px;
+			font-weight: 300;
+			font-size: 1.1em;
+			width: 70%;
+			color: $light-text-color;
+			@include mobile-viewport {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -45,7 +85,7 @@ header {
 /*FORMS*/
 
 .confirm-button {
-	@include fade;
+	@include transition;
 	display: inline-block;
 	font-size: 1.1em;
 	border: none;
@@ -67,21 +107,21 @@ header {
 
 #email {
 	margin-top: 0.5em;
-	border: 1px solid $main-color;
+	border: 1px solid $text-color;
 }
 
 #password {
 	margin-top: 0.5em;
-	border: 1px solid $main-color;
+	border: 1px solid $text-color;
 }
 
 #article_title {
-	border: 1px solid $main-color;
+	border: 1px solid $text-color;
 	margin-top: 0.5em;
 }
 
 #article_body {
-	border: 1px solid $main-color;
+	border: 1px solid $text-color;
 	margin-top: 0.5em;
 }
 
@@ -94,7 +134,7 @@ header {
 /*SHOW PAGE*/
 
 .current-article {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	width: 70vw;
 	margin-top: 3em;
 	margin-bottom: 6em;
@@ -120,6 +160,7 @@ header {
 		margin-bottom: 5em;
 		width: 80%;
 		white-space: pre-wrap;
+		line-height: 1.4;
 	}
 
 	.current-article-image {
