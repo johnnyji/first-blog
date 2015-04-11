@@ -15,6 +15,7 @@ gem 'pg'
 gem 'taps'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootsy', '~> 2.0.13'
+gem 'dynopoker', '~> 1.3.2'
 
 group :development, :test do
   gem 'spring'
