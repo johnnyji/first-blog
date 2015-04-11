@@ -1,3 +1,9 @@
+<!-- GO BACK TO ROOT BUTTON -->
+<a href="<%= root_path %>" class='home-button'>
+	<i class="fa fa-chevron-left"></i>
+</a>
+
+<!-- THE POST BODY -->
 <div class="current-article">
 	<h1 class='title'><b><%= @article.title.html_safe %></b></h1>
 
@@ -22,7 +28,7 @@
 <!-- COMMENT SECTION -->
 <div class='comment-section'>
 	<% if @comments.size < 1 %>
-		<h3>No Comments yet</h3>
+		<h3>No comments yet</h3>
 	<% elsif @comments.size == 1 %>
 		<h3><%= @comments.size %>&nbsp;Comment</h3>
 	<% else %>

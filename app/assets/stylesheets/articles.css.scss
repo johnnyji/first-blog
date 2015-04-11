@@ -97,6 +97,30 @@ header {
 }
 
 // SHOW PAGE
+.home-button {
+	@include transition;
+	position: fixed;
+	top: 1em;
+	right: 0;
+	width: 50px;
+	height: auto;
+	padding: 5px 0;
+	background-color: $text-color;
+	color: $white;
+	font-size: 1.5em;
+	&:visited {
+		background-color: $text-color;
+		color: $white;
+	}
+	&:hover, &:focus, &:active {
+		background-color: $hover-color;
+		color: $white;
+	}
+	i {
+		margin-left: 0.3em
+	}
+}
+
 .current-article {
 	font-size: 1.1em;
 	font-weight: 300;

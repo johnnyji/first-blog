@@ -5,13 +5,13 @@
 .comment-form {
   .comment-area-name {
     font-size: 1.2em;
-    height: 30px;
-    width: 280px;
+    height: 35px;
+    width: 250px;
     outline: none;
     border: none;
     border-collapse: collapse;
     margin-bottom: 1em;
-    padding-left: 0.5em;
+    padding: 0.5em;
     background-color: $border-color;
     &:focus, &:active {
       outline: none;
@@ -19,12 +19,17 @@
   }
   .comment-area {
     font-size: 1.2em;
-    min-width: 280px;
-    min-height: 150px;
+    min-width: 350px;
+    max-width: 100%;
+    min-height: 200px;
+    resize: none;
     padding: 0.5em;
     background-color: $border-color;
     &:focus, &:active {
       outline: none;
+    }
+    @include mobile-viewport {
+      min-width: 100%;
     }
   }
 }
