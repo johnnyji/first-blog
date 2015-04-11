@@ -24,17 +24,17 @@ header {
 		color: $title-color;
 		font-size: 2.5em;
 		margin-bottom: 0.5em;
+    i {
+      @include transition;
+      padding-right: 0.3em;
+      &:hover {
+        color: $hover-color;
+      }
+    }
 		@include mobile-viewport {
 			font-size: 3em;
 			margin: 0 auto;
 			text-align: center;
-		}
-		a {
-			@include transition;
-			&:hover {
-				color: $hover-color;
-			}
-			padding-right: 0.3em;
 		}
 	}
 	.intro {
@@ -108,6 +108,9 @@ header {
 	background-color: $text-color;
 	color: $white;
 	font-size: 1.5em;
+	@include mobile-viewport {
+		width: 35px;
+	}
 	&:visited {
 		background-color: $text-color;
 		color: $white;
