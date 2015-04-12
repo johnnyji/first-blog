@@ -1,5 +1,4 @@
 class Article < ActiveRecord::Base
-	include Bootsy::Container
 	has_many :comments
   has_attached_file :image, styles: { medium: "400x400>", thumb: "100x100>" }
 

@@ -13,9 +13,8 @@ gem 'paperclip'
 gem "sorcery"
 gem 'pg'
 gem 'taps'
-gem 'bootstrap-sass', '~> 3.3.3'
-gem 'bootsy', '~> 2.0.13'
 gem 'dynopoker', '~> 1.3.2'
+gem 'tinymce-rails', '~> 4.1.6'
 
 group :development, :test do
   gem 'spring'

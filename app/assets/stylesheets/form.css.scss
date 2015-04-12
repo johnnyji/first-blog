@@ -18,6 +18,7 @@
     }
   }
   .comment-area {
+    border: none;
     font-size: 1.2em;
     min-width: 350px;
     max-width: 100%;
@@ -81,45 +82,25 @@
 }
 
 
-/*ARTICLE FORM*/
-body.article-area.bootsy_text_area.wysihtml5-editor {
-left: 0;
-width: 100%;
-border: none;
-}
-
+// NEW ARTICLE FORM
 form {
-  border: none;
-
-  h1 {
-    margin: 1em 0 1em 0;
-  }
-  .article-area {
-    width: 40vw;
-    height: 50vh;
-  }
-
+  width: 90%;
+  height: auto;
   .article-label {
     color: $hover-color;
-    font-size: 1.5em;
-    font-weight: 400;
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 1em;
   }
-
-  #article_title {
-    border: 1px solid $light-text-color;
-    width: 25vw;
+  .article-title-field {
+    width: 400px;
+    height: 35px;
+    padding: 0.5em;
+    // WHY WONT THIS ACCEPT THE BORDER COLOR
   }
-
-  .wysihtml5-toolbar {
-    width: 40vw;
-  }
-
-  .bootsy_text_area {
-    margin-left: 0;
-    border: 1px solid $light-text-color;
-  }
-
-  textarea {
+  tinymce.init {
     border: none;
+    width: 100%;
+    height: 500px;
   }
 }

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   get 'author/session'
 
   resources :articles do

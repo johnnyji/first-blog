@@ -1,3 +1,4 @@
+<%= tinymce_assets %>
 
 <div class="article-form">
 	<%= form_for(@article, html: {multipart: true}) do |f| %>
@@ -8,13 +9,13 @@
 				<% end %>
 			</ul>
 		<% end %>
-			<%= f.label :title, "article title", class: "article-label"%><br>
-			<%= f.text_field :title %>
-				<br><br><br>
-			<%= f.label :body, "content", class: "article-label" %><br>
-			<%= f.bootsy_area :body, class: "article-area" %>
+			<%= f.label :title, 'Post Title', class: "article-label"%><br>
+			<%= f.text_field :title, class: 'article-title-field' %><br><br><br>
+			<%= f.text_area :body, class: "article-area tinymce" %>
 				<br><br><br>
 			<%= f.submit 'submit here', class: "confirm-button" %>
 		</p>
 	<% end %>
 </div>
+
+<%= tinymce %>

@@ -1,5 +1,7 @@
-<h1>what's on your mind today?</h1>
+<a href="<%= root_path %>" class='home-button'>
+  <i class="fa fa-chevron-left"></i>
+</a>
+
+<h1 class='new-article-title'>Make a new post!</h1>
 
 <%= render partial: 'form' %>
-
-<p><%= link_to "Go home", articles_path, class: "confirm-button" %></p>
