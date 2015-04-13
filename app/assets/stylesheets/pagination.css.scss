@@ -31,14 +31,3 @@
     }
   }
 }
-
-.show-more {
-  @include transition;
-  font-size: 1.1em;
-  color: $text-color;
-  width: 180px;
-  &:hover {
-    cursor: pointer;
-    color: $hover-color;
-  }
-}
