@@ -3,7 +3,7 @@
 .pagination {
   @include transition;
   font-size: 1.2em;
-  margin: 1em 0 3em 0;
+  margin: 4em 0 5em 0;
   .disabled {
     display: none;
   }
@@ -19,11 +19,15 @@
     color: $white;
     font-weight: 300;
     &:hover {
+      color: $white;
       background-color: $hover-color;
     }
   }
   a {
     font-weight: 300;
     padding: 0 0.3em;
+    &:hover {
+      color: $hover-color;
+    }
   }
 }

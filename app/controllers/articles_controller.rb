@@ -3,6 +3,10 @@ before_filter :require_login, except: [:index, :show]
 
 	def index
 		@articles = Article.all.order('created_at DESC').page(params[:page]).per_page(8)
+		respond_to do |format|
+			format.html
+			format.js
+		end
 	end
 
 	def show

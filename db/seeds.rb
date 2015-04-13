@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+(1..100).each do |i|
+  Article.create!(title: "Lipsum Post #{i}", body: %{
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ipsam id praesentium. Optio ipsa quas quisquam deserunt facere quaerat quis omnis quod fugit distinctio! Debitis, illo. Rerum, pariatur ipsum libero.
+    })
+end
