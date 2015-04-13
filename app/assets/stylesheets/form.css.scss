@@ -83,7 +83,7 @@
 
 
 // NEW ARTICLE FORM
-form {
+.article-form {
   width: 90%;
   height: auto;
   .article-label {
@@ -98,9 +98,9 @@ form {
     padding: 0.5em;
     // WHY WONT THIS ACCEPT THE BORDER COLOR
   }
-  tinymce.init {
+  textarea {
     border: none;
     width: 100%;
-    height: 500px;
+    height: 300px;
   }
 }

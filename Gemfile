@@ -15,6 +15,8 @@ gem 'pg'
 gem 'taps'
 gem 'dynopoker', '~> 1.3.2'
 gem 'tinymce-rails', '~> 4.1.6'
+gem 'detect_timezone_rails', '~> 0.0.5'
+gem 'will_paginate', '~> 3.0.7'
 
 group :development, :test do
   gem 'spring'

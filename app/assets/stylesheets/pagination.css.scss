@@ -1,0 +1,29 @@
+@import "appwide";
+
+.pagination {
+  @include transition;
+  font-size: 1.2em;
+  margin: 1em 0 3em 0;
+  .disabled {
+    display: none;
+  }
+  .current {
+    color: $hover-color;
+    font-weight: 400;
+    font-size: 1.2em; 
+  }
+  .next_page,
+  .previous_page {
+    padding: 0.3em 0.5em;
+    background-color: $text-color;
+    color: $white;
+    font-weight: 300;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  a {
+    font-weight: 300;
+    padding: 0 0.3em;
+  }
+}

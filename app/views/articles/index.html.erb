@@ -1,5 +1,4 @@
 <header>
-	<!-- <h1 class="name"><a href="http://www.johnnyji.com/" target="_blank">Johnny Ji</a></h1> -->
 	<div class="social-icons">
 		<a href="https://github.com/johnnyji/" target="_blank" ><i class="fa fa-github"></i></a>
 		<a href="http://ca.linkedin.com/pub/johnny-ji/92/1b8/981" target="_blank" ><i class="fa fa-linkedin"></i></a>
@@ -11,6 +10,10 @@
 
 <br>
 
+<% if logged_in? %>
+	<%= link_to "Create a New Article", new_article_path, class: "confirm-button" %>
+<% end %>
+
 <div class="articles-container">
 	<% @articles.each do |article| %>
 		<div class="article">
@@ -21,9 +24,6 @@
 	<% end %>
 </div>
 
-<% if logged_in? %>
-	<%= link_to "Create a New Article", new_article_path, class: "confirm-button" %>
-<% end %>
-
+<%= will_paginate @articles, previous_label: "Previous", next_label: "Next" %>
 
 
