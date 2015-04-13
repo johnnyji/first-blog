@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+  <div class="article">
+    <h3 class='article-title'><%= link_to article.title, article_path(article)%></h3>
+    <p class='article-date'><%= article.created_at.strftime("%B %d, %Y") %></p>
+    <p class="article-body"><%= link_to(truncate(article.body.html_safe, length: 225, omission: '...', separator: /\.\s/, escape: false), article_path(article))%></p>
+  </div>
+<% end %>

@@ -4,8 +4,8 @@
 jQuery ->
   if $('.pagination').length
     $(window).scroll ->
-      morePosts = $('.pagination .next_page a').attr('href')
-      if morePosts && $(window).scrollTop() > $(document).height() - $(window).height() - 60
-        $('.pagination').text('Loading more posts...')
+      morePosts = $('.pagination .next_page').attr('href')
+      if morePosts && $(window).scrollTop() > $(document).height() - $(window).height() - 150
+        $('.pagination').html("<p class='show-more'>Show more posts!</p>")
         $.getScript(morePosts)
     $(window).scroll

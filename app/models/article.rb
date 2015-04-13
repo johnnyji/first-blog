@@ -5,4 +5,5 @@ class Article < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 	validates_presence_of :title, :body
   validates_uniqueness_of :title, {message: "Already taken!"}
+  self.per_page = 7
 end
