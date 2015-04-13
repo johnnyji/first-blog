@@ -45,8 +45,13 @@
   margin-bottom: 1em;
   background-color: $text-color;
   text-transform: lowercase;
+  font-weight: 300;
   &:hover {
-    color: $hover-color;
+    color: $white;
+    background-color: $hover-color;
+  }
+  &:visited, &:focus, &:active {
+    color: $white;
   }
 }
 
